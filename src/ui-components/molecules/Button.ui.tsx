@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { Padding } from '../../styles/Spacing'
 import Palette from '../../styles/Palette'
+import { MouseEventHandler } from 'react'
 type ButtonStyledProps = {
-  action?: string
+  action?: MouseEventHandler<HTMLButtonElement>
   border?: string
   variant?: string
   width?: string
@@ -43,7 +44,7 @@ const Button = ({
 }: ButtonStyledProps) => {
   return (
     <ButtonStyled
-      action={action}
+      onClick={action}
       border={border}
       variant={variant}
       width={width}
